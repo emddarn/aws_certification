@@ -1,6 +1,6 @@
-## 3. Cloud Overview:
+## 3. Overview:
 
-**AWS region** is a geographical area. Each region consists of 2 or more availabilty region. Every amazon region is completely isolated from other amazon region.
+**region** is a geographical area. Each region consists of 2 or more availabilty region. Every amazon region is completely isolated from other amazon region.
 
 The **avaialbity zones (AZ)** are the location where we launch resources e.g. EC2 
 There are multiple availabilty zones in each region 
