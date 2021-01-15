@@ -17,8 +17,8 @@ pull data out aws - charged - e.g. pull from S3
 - spot instance - purchase capacity (spare) - no commitment, good discount - but can't get shut-down if somebody pays for resources
 reservation - discount upto 75% but commit for term 1yr or 3 yr only - 
 
-pay monthly, 
-pay partail upfront and pay rest monthly, 
-pay full in upfront, reservation for EC2, DynamoDB, Elastichache, RDS DB, Redshift 
+- pay monthly, 
+- pay partail upfront and pay rest monthly, 
+- pay full in upfront, reservation for EC2, DynamoDB, Elastichache, RDS DB, Redshift 
 
 **AWS accepatble use policy** - describes phohibited use of AWS
