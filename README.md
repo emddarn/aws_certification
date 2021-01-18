@@ -40,13 +40,17 @@ pswrod: access to management console ...access key for programtic access
 - user can represent application (service account); upto 500 suers; user can have name (eric, ethan, etc) and ARN; create iam account for users and never share and define - 
 - password policy: password length and complexity
 **Group:** collect users together and attach policites to them - not an identity; can't specity group in the poicity while writing..but assign plicity to user....groups are like developer, admin, and assign policity required...assign policy principle of least privilege (security best practice don't give more than need priv)...can't put group in another group.
-roles: roles: creatd and used or assumed by an entity (application or service can use role for permission) - delegating permission for resources to user/services - don't have to username/password in code - both iam user/service assume role to gain temporary securty credentials and use API - 
-policity: documents to define permission - applied users/group/roles - written in json - all permission is implicity denied (denied by default unless in the policy) - if there's multiple policy assigned, the most restricive one is applice. iam policy simulator - test plolicy - condiion eleemtn: apply further conditional logic (maynot come in practiotioner)
-authentication methods: 3 key methods - 1. access key: access keyid + secrted access key ..can use mfa = used for programatic access - create/view/modify in console - while creating you can see it once, but can't see that anymore...it lost, recreate. users can have right to change it or disable user access to key to prevent using
-2. iam user: user log in using password to management console - 
-3. sign-in certificate: certicate can be used to access services
 
-console password: username+password to access amc
+**roles:** creatd and used or assumed by an entity (application or service can use role for permission) - delegating permission for resources to user/services - don't have to username/password in code - both iam user/service assume role to gain temporary securty credentials and use API - 
+
+**policy:** documents to define permission - applied users/group/roles - written in json - all permission is implicity denied (denied by default unless in the policy) - if there's multiple policy assigned, the most restricive one is applice. iam policy simulator - test plolicy - condiion eleemtn: apply further conditional logic (maynot come in practiotioner)
+
+**authentication methods:** 3 key methods - 
+* access key: access keyid + secrted access key ..can use mfa = used for programatic access - create/view/modify in console - while creating you can see it once, but can't see that anymore...it lost, recreate. users can have right to change it or disable user access to key to prevent using
+* iam user: user log in using password to management console - 
+* sign-in certificate: certicate can be used to access services
+
+*console password:* username+password to access amc
 restrict to chagne password in general and then use specific policy to allow certain user to chagne password
 SSL/TSL certificate -used to atuthenticate to certian services (not imp for certification)
 MFA; combine password+virtual (google authenticator app)/physical mfa device - add 2nd level of authenticaiton
