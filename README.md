@@ -22,3 +22,13 @@ pull data out aws - charged - e.g. pull from S3
 - pay full in upfront, reservation for EC2, DynamoDB, Elastichache, RDS DB, Redshift 
 
 **AWS accepatble use policy** - describes phohibited use of AWS
+
+
+IAM service - used to create security identifty -8isers, groups, controlling thourgh policies and roles
+users: entity represents person or service - assign access keyid and secret access key - acess aws through cli, api, programatic access, sdk developement tool
+pswrod: access to management console ...access key for programtic access
+bydefault, users don't have any access to account, root user credential email address - always have full admin permission - no restrict
+best practice - don't use root credentials, no sharing, create iam user and assign admin permission, enable mfa
+user can represent application (service account), upto 500 suers, user can have name (eric, ethan, etc) and ARN. create iam account for users and never share and define password policy: password length and complexity
+group: collect users together and attach policites to them..not an identity. can't specity group in the poicity wheile wrrtting..but assign plicity to user....groups are like developer, admin, and assign policity required...assign policy principle of least privilege (security best practice don't give more than need priv)...can't put group in another group.
+roles:
