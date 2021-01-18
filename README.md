@@ -36,3 +36,25 @@ policity: documents to define permission - applied users/group/roles - written i
 authentication methods: 3 key methods - 1. access key: access keyid + secrted access key ..can use mfa = used for programatic access - create/view/modify in console - while creating you can see it once, but can't see that anymore...it lost, recreate. users can have right to change it or disable user access to key to prevent using
 2. iam user: user log in using password to management console - 
 3. sign-in certificate: certicate can be used to access services
+
+console password: username+password to access amc
+restrict to chagne password in general and then use specific policy to allow certain user to chagne password
+SSL/TSL certificate -used to atuthenticate to certian services (not imp for certification)
+MFA; combine password+virtual (google authenticator app)/physical mfa device - add 2nd level of authenticaiton
+SDS service - gives *limited privil certedtial* - *temporary* - assume a role, some credet given to role - but rotated over time
+iam best practices:(imp):
+locking away root acces key
+create indivitual user - no sharing account
+use aws-defined plicityes to dfein policies whenever possible (to prvent mistake)
+use groups to assign permission - put users to groups
+grant least privilege to do user's job
+use access level to review iam permission - periodically check/review to all user/grrp/roles
+config stong password policy
+MFA
+use roles for application run on EC2 (use roles than access  key)
+delegate by using roles instead of sharing credentials
+rotate credentials regularly
+remov unncessary credentials
+use policy condition for extra security (policy applies only computer has specific ip range)
+monitor activity 
+
