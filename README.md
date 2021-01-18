@@ -31,4 +31,8 @@ bydefault, users don't have any access to account, root user credential email ad
 best practice - don't use root credentials, no sharing, create iam user and assign admin permission, enable mfa
 user can represent application (service account), upto 500 suers, user can have name (eric, ethan, etc) and ARN. create iam account for users and never share and define password policy: password length and complexity
 group: collect users together and attach policites to them..not an identity. can't specity group in the poicity wheile wrrtting..but assign plicity to user....groups are like developer, admin, and assign policity required...assign policy principle of least privilege (security best practice don't give more than need priv)...can't put group in another group.
-roles:
+roles: roles: creatd and used or assumed by an entity (application or service can use role for permission) - delegating permission for resources to user/services - don't have to username/password in code - both iam user/service assume role to gain temporary securty credentials and use API - 
+policity: documents to define permission - applied users/group/roles - written in json - all permission is implicity denied (denied by default unless in the policy) - if there's multiple policy assigned, the most restricive one is applice. iam policy simulator - test plolicy - condiion eleemtn: apply further conditional logic (maynot come in practiotioner)
+authentication methods: 3 key methods - 1. access key: access keyid + secrted access key ..can use mfa = used for programatic access - create/view/modify in console - while creating you can see it once, but can't see that anymore...it lost, recreate. users can have right to change it
+2. iam user: user log in using password to management console - 
+3. sign-in certificate: certicate can be used to access services
