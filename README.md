@@ -29,21 +29,39 @@ pull data out aws - charged - e.g. pull from S3
 **AWS accepatble use policy** - describes phohibited use of AWS
 
 
-**IAM service** - used to create security identity - e.g. users, groups etc. - can be controlled thourgh policies and roles 
+**IAM service** - used to create security identity - e.g. users, groups etc. - can be controlled through policies and roles 
 
-**Users:** entity represents person or service - assign access key id and secret access key - acess aws through cli, api, programatic access, sdk developement tool  
+**Users:** entity represents person or service 
+- assign Access Key ID and Secret Access Key - needed to access AWS through CLI, API, programatic access, SDK developement tool  
+- by default, users don't have any access to account, 
+- root user's credential: email address - always have full admin permission - no restriction
+- user can represent application (service account); upto 500 suers; user can have name (eric, ethan, etc) and ARN; create IAM account for users and never share 
+- best practice - don't use root credentials; no sharing; create IAM user and assign admin permission: enable multi-factor authetication (MFA)
+- define password policy: password length and complexity
 
-pswrod: access to management console ...access key for programtic access 
+We need 
+- password - to access the management console
+- access key - for programtic access 
 
-- by default, users don't have any access to account, root user credential email address - always have full admin permission - no restrict
-- best practice - don't use root credentials, no sharing; create iam user and assign admin permission, enable mfa
-- user can represent application (service account); upto 500 suers; user can have name (eric, ethan, etc) and ARN; create iam account for users and never share and define - 
-- password policy: password length and complexity
-**Group:** collect users together and attach policites to them - not an identity; can't specity group in the poicity while writing..but assign plicity to user....groups are like developer, admin, and assign policity required...assign policy principle of least privilege (security best practice don't give more than need priv)...can't put group in another group.
+**Group:** collect users together and attach policites to them 
+- not an identity; 
+- can't specity group in the poicity *while writing* - but can assign policy later
+- groups are like developer, admin, and assign policity required
+- assign policy principle of least privilege (security best practice don't give more than needed privilege)
+- can't put group in another group.
 
-**roles:** creatd and used or assumed by an entity (application or service can use role for permission) - delegating permission for resources to user/services - don't have to username/password in code - both iam user/service assume role to gain temporary securty credentials and use API - 
+**roles:** creatd and used or assumed by an entity (application or service can use role for permission) 
+- used to delegate permission for resources to user/services 
+- don't have to put username/password in code 
+- both IAM user/service assume role to gain temporary securty credentials and use API  
 
-**policy:** documents to define permission - applied users/group/roles - written in json - all permission is implicity denied (denied by default unless in the policy) - if there's multiple policy assigned, the most restricive one is applice. iam policy simulator - test plolicy - condiion eleemtn: apply further conditional logic (maynot come in practiotioner)
+**policy:** documents to define permission 
+- applied users/group/roles 
+- written in json 
+- all permission is implicity denied (denied by default unless in the policy) 
+- if there's multiple policy assigned, the most restricive one is applied
+- IAM policy simulator - used to test policy 
+- condiion element: apply further conditional logic (maynot come in practiotioner)
 
 **authentication methods:** 3 key methods - 
 * access key: access keyid + secrted access key ..can use mfa = used for programatic access - create/view/modify in console - while creating you can see it once, but can't see that anymore...it lost, recreate. users can have right to change it or disable user access to key to prevent using
