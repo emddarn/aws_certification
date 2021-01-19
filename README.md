@@ -68,24 +68,29 @@ We need
 * iam user: user log in using password to management console - 
 * sign-in certificate: certicate can be used to access services
 
-*console password:* username+password to access amc
-restrict to chagne password in general and then use specific policy to allow certain user to chagne password
-SSL/TSL certificate -used to atuthenticate to certian services (not imp for certification)
-MFA; combine password+virtual (google authenticator app)/physical mfa device - add 2nd level of authenticaiton
-SDS service - gives *limited privil certedtial* - *temporary* - assume a role, some credet given to role - but rotated over time
-iam best practices:(imp):
-locking away root acces key
-create indivitual user - no sharing account
-use aws-defined plicityes to dfein policies whenever possible (to prvent mistake)
-use groups to assign permission - put users to groups
-grant least privilege to do user's job
-use access level to review iam permission - periodically check/review to all user/grrp/roles
-config stong password policy
-MFA
-use roles for application run on EC2 (use roles than access  key)
-delegate by using roles instead of sharing credentials
-rotate credentials regularly
-remov unncessary credentials
-use policy condition for extra security (policy applies only computer has specific ip range)
-monitor activity 
+*console password:* username+password to access account 
+- we can restrict to change password in general and then use specific policy to allow certain user to change password
+
+*SSL/TSL certificate*
+- used to atuthenticate to certian services (not imp for certification)
+
+*MFA:* combine password+virtual (google authenticator app)/physical mfa device - add 2nd level of authenticaiton
+
+*SDS service* - gives *limited privilege certedtial* - *temporary* - assume a role, some credential given to role - but rotated over time
+
+**IAM best practices:(imp):**
+- locking away root acces key 
+- create individual user - no sharing account
+- use aws-defined policies to define policies whenever possible (to prvent mistake)
+- use groups to assign permission - put users to groups
+- grant least privilege to do user's job
+- use access level to review IAM permission - periodically check/review to all user/group/roles
+- configure stong password policy
+- MFA
+- use roles for application run on EC2 (use roles than access  key)
+- delegate by using roles instead of sharing credentials
+- rotate credentials regularly
+- remove unncessary credentials
+- use policy condition for extra security (e.g. policy to apply only computer has specific IP range)
+- monitor activity 
 
